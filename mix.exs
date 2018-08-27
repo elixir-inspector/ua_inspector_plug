@@ -28,7 +28,8 @@ defmodule UAInspector.Plug.Mixfile do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:excoveralls, "~> 0.9", only: :test},
-      {:plug, "~> 1.4", optional: true}
+      {:plug, "~> 1.4", optional: true},
+      {:ua_inspector, "~> 0.18", optional: true}
     ]
   end
 
