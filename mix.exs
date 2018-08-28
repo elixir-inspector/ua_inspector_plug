@@ -9,6 +9,7 @@ defmodule UAInspector.Plug.Mixfile do
       name: "UAInspector Plug",
       version: "0.1.0-dev",
       elixir: "~> 1.3",
+      aliases: aliases(),
       deps: deps(),
       description: "UAInspector Plug",
       docs: docs(),
@@ -23,6 +24,16 @@ defmodule UAInspector.Plug.Mixfile do
   end
 
   def application, do: []
+
+  defp aliases do
+    [
+      test: [
+        "ua_inspector.download.databases --force",
+        "ua_inspector.download.short_code_maps --force",
+        "test"
+      ]
+    ]
+  end
 
   defp deps do
     [
