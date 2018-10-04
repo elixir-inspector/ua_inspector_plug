@@ -23,8 +23,6 @@ defmodule UAInspector.Plug.Mixfile do
     ]
   end
 
-  def application, do: []
-
   defp aliases do
     [
       test: [
