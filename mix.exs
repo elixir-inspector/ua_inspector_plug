@@ -8,7 +8,7 @@ defmodule UAInspector.Plug.Mixfile do
       app: :ua_inspector_plug,
       name: "UAInspector Plug",
       version: "0.1.0-dev",
-      elixir: "~> 1.3",
+      elixir: "~> 1.5",
       aliases: aliases(),
       deps: deps(),
       description: "UAInspector Plug",
