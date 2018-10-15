@@ -2,13 +2,13 @@
 
 ## Package Setup
 
-Add both `:ua_inspector_plug` and `:ua_inspector` as dependencies
-to your `mix.exs` file:
+Ensure all required dependencies are listed in your `mix.exs`:
 
 ```elixir
 defp deps do
   [
     # ...
+    [:plug, "~> 1.0"},
     {:ua_inspector, "~> 0.18"},
     {:ua_inspector_plug, "~> 0.1"}
     # ...
