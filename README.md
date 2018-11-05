@@ -20,13 +20,11 @@ end
 
 ### Configuration
 
-Ensure `:ua_inspector` is configured properly. There are no additional
-configuration steps necessary.
+Ensure `:ua_inspector` is configured properly. There are no additional configuration steps necessary.
 
 ### Plug
 
-To automatically parse a clients user agent and enrich the connection you need
-to add the plug into your current pipeline:
+To automatically parse a clients user agent and enrich the connection you need to add the plug into your current pipeline:
 
 ```elixir
 defmodule MyRouter do
@@ -41,11 +39,9 @@ defmodule MyRouter do
 end
 ```
 
-Depending on how you are using plugs the actual location may vary. Please
-consult your frameworks documentation to find the proper place.
+Depending on how you are using plugs the actual location may vary. Please consult your frameworks documentation to find the proper place.
 
-Once setup the connection will be automatically enriched with the results of
-a lookup based on the connections `user-agent` header:
+Once setup the connection will be automatically enriched with the results of a lookup based on the connections `user-agent` header:
 
 ```elixir
 defmodule MyRouter do
