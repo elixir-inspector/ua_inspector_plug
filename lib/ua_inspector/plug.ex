@@ -1,6 +1,38 @@
 defmodule UAInspector.Plug do
   @moduledoc """
   UAInspector Plug
+
+  ## Usage
+
+  After ensuring `:ua_inspector` is configured you need to add the plug:
+
+      defmodule MyRouter do
+        use Plug.Router
+
+        # ...
+        plug UAInspector.Plug
+        # ...
+
+        plug :match
+        plug :dispatch
+      end
+
+  Depending on how you are using plugs the actual location may vary.
+  Please consult your frameworks documentation to find the proper place.
+
+  Once setup the connection will be automatically enriched with the results of
+  a lookup based on the connections `user-agent` header:
+
+      defmodule MyRouter do
+        get "/" do
+          case UAInspector.Plug.get_result(conn) do
+            %{user_agent: nil} -> send_resp(conn, 404, "Missing user agent")
+            %{user_agent: ""} -> send_resp(conn, 404, "Empty user agent")
+            %{device: :unknown} -> send_resp(conn, 404, "Unknown device type")
+            %{device: %{type: type}} -> send_resp(conn, 200, "Device type: " <> type)
+          end
+        end
+      end
   """
 
   import Plug.Conn
