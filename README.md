@@ -47,8 +47,10 @@ Once setup the connection will be automatically enriched with the results of a l
 defmodule MyRouter do
   get "/" do
     case UAInspector.Plug.get_result(conn) do
-      %{device: %{type: type}} -> send_resp(conn, 200, "Device type: #{type}")
-      nil -> send_resp(conn, 404, "Unknown device type or missing user agent")
+      %{user_agent: nil} -> send_resp(conn, 404, "Missing user agent")
+      %{user_agent: ""} -> send_resp(conn, 404, "Empty user agent")
+      %{device: :unknown} -> send_resp(conn, 404, "Unknown device type")
+      %{device: %{type: type}} -> send_resp(conn, 200, "Device type: " <> type)
     end
   end
 end
