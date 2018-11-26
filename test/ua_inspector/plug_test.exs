@@ -22,6 +22,10 @@ defmodule UAInspector.PlugTest do
 
   @opts Router.init([])
 
+  test "nil result if no lookup performed" do
+    assert nil == conn(:get, "/") |> UAInspector.Plug.get_result()
+  end
+
   test "empty result for missing agent" do
     conn = conn(:get, "/") |> Router.call(@opts)
 

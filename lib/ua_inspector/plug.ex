@@ -26,6 +26,7 @@ defmodule UAInspector.Plug do
       defmodule MyRouter do
         get "/" do
           case UAInspector.Plug.get_result(conn) do
+            nil -> send_resp(conn, 500, "No lookup done")
             %{user_agent: nil} -> send_resp(conn, 404, "Missing user agent")
             %{user_agent: ""} -> send_resp(conn, 404, "Empty user agent")
             %{device: :unknown} -> send_resp(conn, 404, "Unknown device type")
