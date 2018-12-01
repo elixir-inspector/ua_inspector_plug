@@ -1,7 +1,6 @@
 use Mix.Config
 
-env_config = Path.expand("#{Mix.env()}.exs", __DIR__)
-
-if File.exists?(env_config) do
-  import_config(env_config)
+if Mix.env() == :test do
+  config :ua_inspector,
+    database_path: Path.join(__DIR__, "../test/database")
 end
