@@ -23,12 +23,6 @@ defmodule UAInspector.Plug.Mixfile do
     ]
   end
 
-  def application do
-    [
-      extra_applications: [:plug, :ua_inspector]
-    ]
-  end
-
   defp aliases do
     [
       test: [
