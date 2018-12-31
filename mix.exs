@@ -35,6 +35,7 @@ defmodule UAInspector.Plug.Mixfile do
 
   defp deps do
     [
+      {:credo, "~> 1.0", only: :dev, runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:excoveralls, "~> 0.10", only: :test},
       {:plug, "~> 1.0"},
