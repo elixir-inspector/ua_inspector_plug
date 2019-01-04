@@ -27,8 +27,7 @@ defmodule UAInspector.Plug.Mixfile do
   defp aliases do
     [
       test: [
-        "ua_inspector.download.databases --force",
-        "ua_inspector.download.short_code_maps --force",
+        "ua_inspector.download --force",
         "test"
       ]
     ]
