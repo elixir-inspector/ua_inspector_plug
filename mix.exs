@@ -13,6 +13,7 @@ defmodule UAInspector.Plug.Mixfile do
       deps: deps(),
       description: "UAInspector Plug",
       docs: docs(),
+      elixirc_paths: elixirc_paths(Mix.env()),
       package: package(),
       preferred_cli_env: [
         coveralls: :test,
@@ -40,7 +41,7 @@ defmodule UAInspector.Plug.Mixfile do
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:excoveralls, "~> 0.10", only: :test},
       {:plug, "~> 1.0"},
-      {:ua_inspector, "~> 0.18"}
+      {:ua_inspector, "~> 0.19"}
     ]
   end
 
@@ -51,6 +52,9 @@ defmodule UAInspector.Plug.Mixfile do
       source_url: @url_github
     ]
   end
+
+  defp elixirc_paths(:test), do: ["lib", "test/helpers"]
+  defp elixirc_paths(_), do: ["lib"]
 
   defp package do
     %{
