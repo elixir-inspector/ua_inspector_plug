@@ -40,7 +40,7 @@ defmodule UAInspector.Plug.Mixfile do
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:excoveralls, "~> 0.10", only: :test, runtime: false},
       {:plug, "~> 1.0"},
-      {:ua_inspector, "~> 0.20"}
+      {:ua_inspector, "~> 1.0"}
     ]
   end
 
