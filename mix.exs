@@ -9,7 +9,6 @@ defmodule UAInspector.Plug.MixProject do
       name: "UAInspector Plug",
       version: "0.2.0-dev",
       elixir: "~> 1.5",
-      aliases: aliases(),
       deps: deps(),
       description: "UAInspector Plug",
       docs: docs(),
@@ -21,15 +20,6 @@ defmodule UAInspector.Plug.MixProject do
         "coveralls.travis": :test
       ],
       test_coverage: [tool: ExCoveralls]
-    ]
-  end
-
-  defp aliases do
-    [
-      test: [
-        "ua_inspector.download --force",
-        "test"
-      ]
     ]
   end
 
