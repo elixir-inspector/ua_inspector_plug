@@ -28,7 +28,7 @@ defmodule UAInspector.Plug.MixProject do
       {:credo, "~> 1.0", only: :dev, runtime: false},
       {:dialyxir, "~> 1.0.0-rc", only: :dev, runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:excoveralls, "~> 0.11", only: :test, runtime: false},
+      {:excoveralls, "~> 0.12", only: :test, runtime: false},
       {:plug, "~> 1.0"},
       {:ua_inspector, "~> 1.0"}
     ]
