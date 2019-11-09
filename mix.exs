@@ -8,7 +8,7 @@ defmodule UAInspector.Plug.MixProject do
       app: :ua_inspector_plug,
       name: "UAInspector Plug",
       version: "0.2.0-dev",
-      elixir: "~> 1.5",
+      elixir: "~> 1.7",
       deps: deps(),
       description: "UAInspector Plug",
       docs: docs(),
