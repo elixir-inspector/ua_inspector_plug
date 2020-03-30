@@ -30,7 +30,7 @@ defmodule UAInspector.Plug.MixProject do
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:excoveralls, "~> 0.12", only: :test, runtime: false},
       {:plug, "~> 1.0"},
-      {:ua_inspector, "~> 1.0"}
+      {:ua_inspector, "~> 2.0"}
     ]
   end
 
