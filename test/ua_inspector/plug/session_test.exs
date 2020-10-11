@@ -38,7 +38,7 @@ defmodule UAInspector.Plug.SessionTest do
              client: %UAInspector.Result.Client{},
              device: %UAInspector.Result.Device{},
              os: %UAInspector.Result.OS{},
-             user_agent: agent
+             user_agent: ^agent
            } = UAInspector.Plug.get_result(conn)
   end
 

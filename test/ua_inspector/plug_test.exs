@@ -55,7 +55,7 @@ defmodule UAInspector.PlugTest do
 
     assert %UAInspector.Result{
              device: :unknown,
-             user_agent: agent
+             user_agent: ^agent
            } = UAInspector.Plug.get_result(conn)
   end
 
@@ -74,7 +74,7 @@ defmodule UAInspector.PlugTest do
              client: %UAInspector.Result.Client{},
              device: %UAInspector.Result.Device{},
              os: %UAInspector.Result.OS{},
-             user_agent: agent
+             user_agent: ^agent
            } = UAInspector.Plug.get_result(conn)
   end
 end
