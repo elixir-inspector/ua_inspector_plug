@@ -11,6 +11,7 @@ defmodule UAInspector.Plug.MixProject do
       elixir: "~> 1.7",
       deps: deps(),
       description: "UAInspector Plug",
+      dialyzer: dialyzer(),
       docs: docs(),
       elixirc_paths: elixirc_paths(Mix.env()),
       package: package(),
@@ -31,6 +32,17 @@ defmodule UAInspector.Plug.MixProject do
       {:excoveralls, "~> 0.13.0", only: :test, runtime: false},
       {:plug, "~> 1.0"},
       {:ua_inspector, "~> 2.0"}
+    ]
+  end
+
+  defp dialyzer do
+    [
+      flags: [
+        :error_handling,
+        :race_conditions,
+        :underspecs,
+        :unmatched_returns
+      ]
     ]
   end
 
