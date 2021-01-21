@@ -17,8 +17,7 @@ defmodule UAInspector.Plug.MixProject do
       package: package(),
       preferred_cli_env: [
         coveralls: :test,
-        "coveralls.detail": :test,
-        "coveralls.travis": :test
+        "coveralls.detail": :test
       ],
       test_coverage: [tool: ExCoveralls]
     ]
@@ -42,7 +41,9 @@ defmodule UAInspector.Plug.MixProject do
         :race_conditions,
         :underspecs,
         :unmatched_returns
-      ]
+      ],
+      plt_add_apps: [:mix],
+      plt_core_path: "plts"
     ]
   end
 
