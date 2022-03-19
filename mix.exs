@@ -43,7 +43,8 @@ defmodule UAInspector.Plug.MixProject do
         :unmatched_returns
       ],
       plt_add_apps: [:mix],
-      plt_core_path: "plts"
+      plt_core_path: "plts",
+      plt_local_path: "plts"
     ]
   end
 
