@@ -2,12 +2,13 @@ defmodule UAInspector.Plug.MixProject do
   use Mix.Project
 
   @url_github "https://github.com/elixir-inspector/ua_inspector_plug"
+  @version "0.2.0-dev"
 
   def project do
     [
       app: :ua_inspector_plug,
       name: "UAInspector Plug",
-      version: "0.2.0-dev",
+      version: @version,
       elixir: "~> 1.9",
       deps: deps(),
       description: "UAInspector Plug",
@@ -52,7 +53,7 @@ defmodule UAInspector.Plug.MixProject do
     [
       formatters: ["html"],
       main: "UAInspector.Plug",
-      source_ref: "master",
+      source_ref: "v#{@version}",
       source_url: @url_github
     ]
   end
