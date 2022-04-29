@@ -50,6 +50,7 @@ defmodule UAInspector.Plug.MixProject do
 
   defp docs do
     [
+      formatters: ["html"],
       main: "UAInspector.Plug",
       source_ref: "master",
       source_url: @url_github
