@@ -1,6 +1,7 @@
 defmodule UAInspector.Plug.MixProject do
   use Mix.Project
 
+  @url_changelog "https://hexdocs.pm/ua_inspector_plug/changelog.html"
   @url_github "https://github.com/elixir-inspector/ua_inspector_plug"
   @version "0.2.0-dev"
 
@@ -70,7 +71,10 @@ defmodule UAInspector.Plug.MixProject do
     %{
       files: ["CHANGELOG.md", "LICENSE", "mix.exs", "README.md", "lib"],
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => @url_github}
+      links: %{
+        "Changelog" => @url_changelog,
+        "GitHub" => @url_github
+      }
     }
   end
 end
