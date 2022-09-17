@@ -20,8 +20,8 @@ defmodule UAInspector.Plug do
   Depending on how you are using plugs the actual location may vary.
   Please consult your frameworks documentation to find the proper place.
 
-  Once setup the connection will be automatically enriched with the results of
-  a lookup based on the connections `user-agent` header:
+  Once set up the connection will be automatically enriched with the
+  results of a lookup based on the connections `user-agent` header:
 
       defmodule MyRouter do
         get "/" do
