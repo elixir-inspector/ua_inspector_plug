@@ -34,6 +34,18 @@ defmodule UAInspector.Plug do
           end
         end
       end
+
+  ### Automatic Session Population
+
+  You can configure the plug to use `Plug.Session` in order to avoid
+  parsing more than once for the lifetime of the session:
+
+      plug UAInspector.Plug, [
+        session_key: "session_key_to_store_the_result_with",
+        use_session: true
+      ]
+
+  Be sure to call `Plug.Conn.fetch_session/2` earlier in your pipeline.
   """
 
   import Plug.Conn
