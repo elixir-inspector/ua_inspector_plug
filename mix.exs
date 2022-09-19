@@ -10,7 +10,7 @@ defmodule UAInspector.Plug.MixProject do
       app: :ua_inspector_plug,
       name: "UAInspector Plug",
       version: @version,
-      elixir: "~> 1.9",
+      elixir: "~> 1.11",
       deps: deps(),
       description: "UAInspector Plug",
       dialyzer: dialyzer(),
