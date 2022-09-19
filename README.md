@@ -8,7 +8,7 @@ Add the library as a dependency to your `mix.exs` file:
 defp deps do
   [
     # ...
-    {:ua_inspector_plug, "~> 0.1.0"}
+    {:ua_inspector_plug, "~> 0.2.0"}
     # ...
   ]
 end

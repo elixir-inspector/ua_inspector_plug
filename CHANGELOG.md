@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.2.0-dev
+## v0.2.0 (2022-09-19)
 
 - Enhancements
     - The lookup result can be stored inside an existing session to avoid parsing on every request
