@@ -3,6 +3,7 @@
 ## v0.3.0-dev
 
 - Enhancements
+    - Client hints (headers) are used for lookups
     - `UAInspector` has been updated to `~> 3.1`
 
 - Backwards incompatible changes

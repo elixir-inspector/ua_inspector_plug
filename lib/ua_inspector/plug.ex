@@ -27,8 +27,7 @@ defmodule UAInspector.Plug do
         get "/" do
           case UAInspector.Plug.get_result(conn) do
             nil -> send_resp(conn, 500, "No lookup done")
-            %{user_agent: nil} -> send_resp(conn, 404, "Missing user agent")
-            %{user_agent: ""} -> send_resp(conn, 404, "Empty user agent")
+            %{user_agent: ""} -> send_resp(conn, 404, "Empty or missing user agent")
             %{device: :unknown} -> send_resp(conn, 404, "Unknown device type")
             %{device: %{type: type}} -> send_resp(conn, 200, "Device type: " <> type)
           end
@@ -71,11 +70,14 @@ defmodule UAInspector.Plug do
   end
 
   def call(conn, _opts) do
-    lookup =
+    agent =
       case get_req_header(conn, "user-agent") do
-        [] -> UAInspector.parse(nil)
-        [agent | _] -> UAInspector.parse(agent)
+        [agent | _] -> agent
+        _ -> ""
       end
+
+    client_hints = UAInspector.ClientHints.new(conn.req_headers)
+    lookup = UAInspector.parse(agent, client_hints)
 
     put_private(conn, :ua_inspector, lookup)
   end
