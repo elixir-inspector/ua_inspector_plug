@@ -2,6 +2,9 @@
 
 ## v0.3.0-dev
 
+- Enhancements
+    - `UAInspector` has been updated to `~> 3.1`
+
 - Backwards incompatible changes
     - Minimum required Elixir version is now `~> 1.11`
 
