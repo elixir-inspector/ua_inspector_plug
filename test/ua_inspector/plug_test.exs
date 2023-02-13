@@ -71,9 +71,21 @@ defmodule UAInspector.PlugTest do
     assert 200 == conn.status
 
     assert %UAInspector.Result{
-             client: %UAInspector.Result.Client{},
-             device: %UAInspector.Result.Device{},
-             os: %UAInspector.Result.OS{},
+             browser_family: "Safari",
+             client: %UAInspector.Result.Client{
+               engine: "WebKit",
+               engine_version: "537.51.1",
+               name: "Mobile Safari",
+               type: "browser",
+               version: "7.0"
+             },
+             device: %UAInspector.Result.Device{
+               brand: "Apple",
+               model: "iPad",
+               type: "tablet"
+             },
+             os: %UAInspector.Result.OS{name: "iOS", platform: :unknown, version: "7.0.4"},
+             os_family: "iOS",
              user_agent: ^agent
            } = UAInspector.Plug.get_result(conn)
   end
