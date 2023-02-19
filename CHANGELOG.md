@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.3.0-dev
+## v0.3.0 (2023-02-19)
 
 - Enhancements
     - Client hints (headers) are used for lookups
