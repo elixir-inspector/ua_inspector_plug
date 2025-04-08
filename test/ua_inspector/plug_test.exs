@@ -1,6 +1,8 @@
 defmodule UAInspector.PlugTest do
   use ExUnit.Case
-  use Plug.Test
+
+  import Plug.Conn
+  import Plug.Test
 
   defmodule Router do
     use Plug.Router
