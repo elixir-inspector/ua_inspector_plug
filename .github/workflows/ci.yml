@@ -23,7 +23,7 @@ jobs:
         id: setup
         uses: erlef/setup-beam@v1
         with:
-          elixir-version: '1.19.0'
+          elixir-version: '1.19.3'
           otp-version: '28.1'
 
       - name: mix-cache
@@ -80,7 +80,7 @@ jobs:
         id: setup
         uses: erlef/setup-beam@v1
         with:
-          elixir-version: '1.19.0'
+          elixir-version: '1.19.3'
           otp-version: '28.1'
 
       - name: mix-cache
@@ -123,7 +123,7 @@ jobs:
             otp: '26.2'
           - elixir: '1.18.4'
             otp: '27.3'
-          - elixir: '1.19.0'
+          - elixir: '1.19.3'
             otp: '28.1'
 
     steps:
